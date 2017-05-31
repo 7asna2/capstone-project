@@ -100,6 +100,7 @@ public class DetailsFragment extends Fragment implements GoogleApiClient.Connect
                     placePhotosTask(placeId);
                     pID=placeId;
                     pName= (String) myPlace.getName();
+                    imageView.setContentDescription( myPlace.getName());
                     pRating=myPlace.getRating()+"";
                     pLatLong=myPlace.getLatLng();
                     phoneNumber.setText(myPlace.getPhoneNumber());
@@ -143,7 +144,7 @@ public class DetailsFragment extends Fragment implements GoogleApiClient.Connect
                 getActivity().getContentResolver()
                         .insert(Contract.PlaceInstance.uri, contentValues);
 
-                Snackbar.make(mDrawInsetsFrameLayout, "Added to favorites", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(mDrawInsetsFrameLayout,getString(R.string.added_to_fav), Snackbar.LENGTH_LONG).show();
 
             }
         });

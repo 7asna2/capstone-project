@@ -71,6 +71,7 @@ public class WidgetService  extends RemoteViewsService implements GoogleApiClien
 
                 view.setTextViewText(R.id.courseName, data.getString(
                         data.getColumnIndex(Contract.PlaceInstance.COLUMN_NAME)));
+                view.setContentDescription(R.id.imageView,Contract.PlaceInstance.COLUMN_NAME);
 //                new PhotoTask(500, 500, mGoogleApiClient) {
 //                    @Override
 //                    protected void onPreExecute() {

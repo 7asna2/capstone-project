@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,9 +15,6 @@ import android.widget.TextView;
 import com.example.hasnaa.travelo.DataRequest.PhotoTask;
 import com.example.hasnaa.travelo.data.Contract;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.places.Place;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -58,7 +54,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
 
         cursor.moveToPosition(position);
         holder.titleView.setText(cursor.getString(Contract.PlaceInstance.POSITION_NAME));
-        holder.subtitleView.setText(cursor.getString(Contract.PlaceInstance.POSITION_RATING));
+        holder.subtitleView.setText(context.getString((R.string.rating),cursor.getString(Contract.PlaceInstance.POSITION_RATING)));
         new PhotoTask(500, 500, mGoogleApiClient) {
             @Override
             protected void onPreExecute() {
@@ -95,7 +91,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder> {
         @BindView(R.id.article_title)
         public TextView titleView;
 
-        @BindView(R.id.article_subtitle)
+        @BindView(R.id.rating)
         public TextView subtitleView;
 
         @BindView(R.id.map)

@@ -21,11 +21,18 @@
     <string name="on_map">on map</string>
     <string name="add_to_fav">add to fav</string>
 
+    <string name="added_to_fav">Added to favorites</string>
+
     <string name="no_network">Network not available</string>
     <string name="no_location">Location not available</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="title_activity_search">SearchActivity</string>
+
+    <string name="image_button_share">share</string>
+    <string name="image_button_map">open location on map</string>
+    <string name="button_add">add</string>
+    <string name="rating">Rating %s</string>
 
 </resources>

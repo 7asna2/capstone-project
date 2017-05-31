@@ -33,6 +33,7 @@
         android:layout_height="100dp"
         android:clickable="true"
         android:elevation="@dimen/cardview_default_elevation"
+        android:contentDescription="@string/Button_Hotels"
         android:id="@+id/hotels"
         >
         <LinearLayout
@@ -57,6 +58,7 @@
         android:layout_height="100dp"
         android:clickable="true"
         android:elevation="@dimen/cardview_default_elevation"
+        android:contentDescription="@string/Button_entertainment"
         android:id="@+id/entertainment"
         >
         <LinearLayout
@@ -80,6 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:clickable="true"
+        android:contentDescription="@string/Button_restaurants"
         android:id="@+id/restaurants"
         android:elevation="@dimen/cardview_default_elevation"
         >

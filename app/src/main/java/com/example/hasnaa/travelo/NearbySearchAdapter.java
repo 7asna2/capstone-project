@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hasnaa.travelo.DataRequest.PhotoTask;
-import com.example.hasnaa.travelo.data.Contract;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.location.places.Place;
@@ -72,7 +71,7 @@ public class NearbySearchAdapter extends RecyclerView.Adapter<NearbySearchAdapte
                                 Place place = places.get(0);
                                 pLatLng = place.getLatLng();
                                 holder.titleView.setText(place.getName());
-                                holder.subtitleView.setText(place.getRating()+"");
+                                holder.subtitleView.setText(context.getString(R.string.rating,place.getRating()));
                                 new PhotoTask(500, 500, mGoogleApiClient) {
                                     @Override
                                     protected void onPreExecute() {
@@ -108,7 +107,7 @@ public class NearbySearchAdapter extends RecyclerView.Adapter<NearbySearchAdapte
         @BindView(R.id.article_title)
         public TextView titleView;
 
-        @BindView(R.id.article_subtitle)
+        @BindView(R.id.rating)
         public TextView subtitleView;
 
         @BindView(R.id.map)

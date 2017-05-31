@@ -2,7 +2,7 @@ package com.example.hasnaa.travelo;
 
 import android.Manifest;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -173,7 +173,6 @@ public class AddPlaceActivity extends AppCompatActivity implements GoogleApiClie
                     if (cLocation != null) {
                         cLng = cLocation.getLongitude();
                         cLat = cLocation.getLatitude();
-                        Log.d(TAG, "not null ,lat: " + cLat + ",lng: " + cLng);
                         if (snackbar != null && snackbar.isShown()) {
                             snackbar.dismiss();
 
