@@ -208,18 +208,18 @@ public class AddPlaceActivity extends AppCompatActivity implements GoogleApiClie
     public void showSettingsAlert(){
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
 
-        alertDialog.setTitle("GPS settings");
+        alertDialog.setTitle(getString(R.string.dialog_title));
 
-        alertDialog.setMessage("GPS is not enabled. Do you want enable it?");
+        alertDialog.setMessage(getString(R.string.dialog_msg));
 
-        alertDialog.setPositiveButton("Settings", new DialogInterface.OnClickListener() {
+        alertDialog.setPositiveButton(getString(R.string.dialog_button1), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog,int which) {
                 Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
                 startActivity(intent);
             }
         });
 
-        alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        alertDialog.setNegativeButton(getString(R.string.dialog_button2), new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
             }
